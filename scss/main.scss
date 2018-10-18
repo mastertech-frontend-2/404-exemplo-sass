@@ -1,23 +1,8 @@
 @import 'variables';
+@import 'node_modules/bootstrap/scss/bootstrap';
 @import 'globals';
 
-header{
-    background-color: $main-color;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-
-    h1{
-        color: $secondary-color;
-        font-size: 36px;
-    }
-
-    nav{
-        span{
-            font-size: 20px;
-            color: $secondary-color;
-            margin: 0 10px;
-        }
-    }
+.navbar-brand{
+    font-family: 'Charmonman', cursive;
+    font-size: 46px;
 }
