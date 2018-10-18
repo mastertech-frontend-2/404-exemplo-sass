@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  font-family: sans-serif; }
+
+header {
+  background-color: #12199c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px; }
+  header h1 {
+    color: #ec66c8;
+    font-size: 36px; }
+  header nav span {
+    font-size: 20px;
+    color: #ec66c8;
+    margin: 0 10px; }
