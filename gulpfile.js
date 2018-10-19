@@ -1,7 +1,18 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
+const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
+
+gulp.task('concatenar', () => {
+    return gulp.src([
+        'node_modules/jquery/dist/jquery.min.js',
+        'node_modules/popper.js/dist/umd/popper.min.js', 
+        'node_modules/bootstrap/dist/js/bootstrap.min.js'
+    ])
+    .pipe(concat('bundle.js'))
+    .pipe(gulp.dest('dist'));
+});
 
 gulp.task('recarregar', () => {
     browserSync.init({server: './'});
@@ -21,4 +32,4 @@ gulp.task('observar', () => {
     gulp.watch(['index.html', 'css/main.css'], browserSync.reload);
 });
 
-gulp.task('default', ['sass', 'recarregar', 'observar']);
+gulp.task('default', ['sass', 'concatenar', 'recarregar', 'observar']);
