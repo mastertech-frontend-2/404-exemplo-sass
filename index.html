@@ -7,7 +7,7 @@
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet"> 
     <link rel="stylesheet" href="css/main.css">
-    <script src="dist/bundle.js"></script>
+    <script defer src="dist/bundle.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
@@ -40,15 +40,15 @@
     
     <section class="container mt-5">
         <div class="row">
-            <div class="col">
+            <div class="col" id="bolo-morango">
                 <img class="img-fluid" src="img/bolo-1.jpg" alt="">
                 <p>Bolo de Morango</p>
             </div>
-            <div class="col">
+            <div class="col" id="bolo-capim">
                 <img class="img-fluid" src="img/bolo-2.jpg" alt="">
                 <p>Bolo de Capim</p>
             </div>
-            <div class="col">
+            <div class="col" id="bolo-spinners">
                 <img class="img-fluid" src="img/bolo-3.jpg" alt="">
                 <p>Bolo Spinners</p>
             </div>
@@ -80,18 +80,13 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Bolo de Morango</h5>
+                        <h5 class="modal-title" id="exampleModalLabel"></h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <p>Preço: R$ 60,00</p>
-                        <ul>
-                            <li>Morango</li>
-                            <li>Farinha</li>
-                            <li>Açucar</li>
-                        </ul>
+                        
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>

@@ -9,7 +9,7 @@ gulp.task('concatenar', () => {
         'node_modules/jquery/dist/jquery.min.js',
         'node_modules/popper.js/dist/umd/popper.min.js', 
         'node_modules/bootstrap/dist/js/bootstrap.min.js',
-        'js/scripts.js',
+        'js/scripts.js'
     ])
     .pipe(concat('bundle.js'))
     .pipe(gulp.dest('dist'));
@@ -29,8 +29,9 @@ gulp.task('sass', function () {
 
 gulp.task('observar', () => {
     //executa a tarefa concatenar.js quando ocorrem modificações no arquivo scripts.js
+    gulp.watch(['js/*.js'], ['concatenar']);
     gulp.watch(['scss/*.scss'], ['sass']);
-    gulp.watch(['index.html', 'css/main.css'], browserSync.reload);
+    gulp.watch(['index.html', 'css/main.css', 'dist/bundle.js'], browserSync.reload);
 });
 
 gulp.task('default', ['sass', 'concatenar', 'recarregar', 'observar']);
