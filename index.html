@@ -40,15 +40,15 @@
     
     <section class="container mt-5">
         <div class="row">
-            <div class="col">
+            <div class="col" data-toggle="modal" data-target="#exampleModal">
                 <img class="img-fluid" src="img/bolo-1.jpg" alt="">
                 <p>Bolo de Morango</p>
             </div>
-            <div class="col">
+            <div class="col" data-toggle="modal" data-target="#exampleModal">
                 <img class="img-fluid" src="img/bolo-2.jpg" alt="">
                 <p>Bolo de Capim</p>
             </div>
-            <div class="col">
+            <div class="col" data-toggle="modal" data-target="#exampleModal">
                 <img class="img-fluid" src="img/bolo-3.jpg" alt="">
                 <p>Bolo Spinners</p>
             </div>
@@ -75,27 +75,27 @@
             </div>
         </div>
         
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-            Launch demo modal
-        </button>
-        
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Bolo de Morango</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        ...
+                        <p>Preço: R$ 60,00</p>
+                        <ul>
+                            <li>Morango</li>
+                            <li>Farinha</li>
+                            <li>Açucar</li>
+                        </ul>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-success">Fazer Pedido</button>
                     </div>
                 </div>
             </div>
